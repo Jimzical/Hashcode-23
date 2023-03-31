@@ -190,14 +190,15 @@ def DynamicButton(df,ButtonDesc = 'Recommendations',ButtonFuntion = None,ButtonD
     st.sidebar.markdown(f"# {ButtonDesc}")
     output = ButtonFuntion(FunctionArgs,df)
     out_df = pd.DataFrame(output,columns=ButtonData)
-    tab = st.tabs(list(out_df.columns))
+    tab = st.tabs(list(out_df['Name'].values))
     for i in range(len(out_df.columns)):
         with tab[i]:
-            st.markdown(f"Website For :  [{output[i][0]}]({output[i][1]})")
-            st.write(f"Area : {output[i][3]}")
-            st.write(f"Average Cost : {output[i][4]}")
-            st.write(f"Cuisines : {output[i][5]}")
+            st.markdown(f"Website For :  [{out_df['Name'][i]}]({out_df['URL'][i]})")    
+            st.write(f"Area : {out_df['Area'][i]}")
+            st.write(f"Average Cost : {out_df['AverageCost'][i]}")
+            st.write(f"Cuisines : {out_df['Cuisines'][i]}")
             st.write("------------")
+
 
 def BuildGUI(df):
     '''
