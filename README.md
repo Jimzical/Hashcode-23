@@ -1,5 +1,31 @@
 # Hashcode-23
-Hash Rap
-The Final Working Code is in the Rest-Rec Directory
+Team: Hash Rap
 
-Proper README.md file will be added later
+> The Working Code is in the Rest-Rec Directory
+
+# Project
+To Make Restaurant Recommendation System
+
+- ### Recommendation Based on Restaurant Names
+![rest_name](https://github.com/Jimzical/Hashcode-23/blob/IMAGES/rest_rec_images/rest_name.png)
+
+- ### Recommendation Based on Cuisine Concentraion on Map
+![rest_loc1](https://github.com/Jimzical/Hashcode-23/blob/IMAGES/rest_rec_images/rest_loc_1.png)
+![rest_loc2](https://github.com/Jimzical/Hashcode-23/blob/IMAGES/rest_rec_images/rest_loc_2.png)
+
+- ### Recommendation Based on Location
+![rest_name](https://github.com/Jimzical/Hashcode-23/blob/IMAGES/rest_rec_images/rest_loc.png)
+
+# Requirements
+- Run
+  ```
+  pip install -r requirments.txt
+  ```
+### OR
+- Run
+  ```
+  pip install streamlit
+  pip install plotly
+  pip install pandas
+  pip install sklearn
+  ```
