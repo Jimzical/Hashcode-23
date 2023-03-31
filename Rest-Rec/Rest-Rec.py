@@ -225,15 +225,16 @@ def BuildGUI(df):
                 padding: 0.75rem 3rem;
                 font-size: 50 em;
             }
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
         </style>
     """
     st.markdown(button_style, unsafe_allow_html=True)
 
 
     #create a button in a sidebar
-    st.sidebar.title('Please Select a type of Recommendation')
-    st.sidebar.title('Locations for the specific Cuisine')
-    st.sidebar.write('Cuisines options given')
+    st.sidebar.markdown('# Please Select a type of Recommendation')
+    st.sidebar.markdown('<b>Cuisines options given</b>', unsafe_allow_html=True)
     cuisine = st.selectbox('Select a Cuisine', cuisine_list)
     area = st.selectbox('Select Area', area_list)
     rest = st.selectbox('Select Restaurant', rest_list)
