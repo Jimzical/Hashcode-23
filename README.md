@@ -28,5 +28,5 @@ To Make Restaurant Recommendation System
   pip install streamlit
   pip install plotly
   pip install pandas
-  pip install sklearn
+  pip install scikit-learn==1.0.2
   ```
