@@ -12,6 +12,7 @@ Change History:
 import streamlit as st
 import plotly.express as px
 import pandas as pd
+import os
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
 
@@ -252,7 +253,9 @@ def BuildGUI(df):
     if st.sidebar.button('Location Specific'):
         DynamicButton(df,ButtonDesc = 'Ask Location and suggest Cuisines wise',ButtonFuntion = recommend_loc,ButtonData = ['Name','URL','PhoneNumber','Area','AverageCost','Cuisines'],FunctionArgs = area)
 def main():
-    df = LoadData()
+    path = os.path.dirname(__file__)
+    my_file = path+'/CleanZomato.csv'
+    df = LoadData(location=my_file)
     BuildGUI(df)
 
 if __name__ == '__main__':
